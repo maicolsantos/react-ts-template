@@ -1,5 +1,9 @@
 import React from 'react'
 
+import { ButtonContainer } from './styles'
+
 export const Button = () => (
-  <h1>Button</h1>
+  <ButtonContainer>
+    <h1>Button</h1>
+  </ButtonContainer>
 )
