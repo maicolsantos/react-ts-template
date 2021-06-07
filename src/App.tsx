@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { i18n } from './i18n'
 import { Button } from '~/components/Button/Button'
 import logo from './logo.svg'
 import {
@@ -14,15 +15,14 @@ export const App = () => (
     <AppHeader>
       <Button />
       <AppLogo src={logo} alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
+      {/* eslint-disable-next-line react/no-danger */}
+      <p dangerouslySetInnerHTML={{ __html: i18n.t('general.description') }} />
       <AppLink
         href="https://reactjs.org"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Learn React
+        { i18n.t('general.link') }
       </AppLink>
     </AppHeader>
   </AppContainer>
